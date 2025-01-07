@@ -1,125 +1,157 @@
+/* General Styling */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #343a34;
-    padding: 10px 20px;
-  }
-  
-  .navbar h1 {
-    color: #fefffe;
-    font-size: 2.5em;
-  }
-  
-  .navbar nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4b484a;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
 .navbar nav a:hover {
-    color: #b1c2fa;
+  color: #c7c7c7;
 }
-  
-  .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  h2 {
-    color: #333;
-    text-align: center;
-  }
-  
-  .admin-functions {
-    gap: 20px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  
-  .function-card {
-    width: 40%;
-    padding: 20px;
-    background-color: #e7f7e7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .function-card h3 {
-    color: #00ac25;
-    font-size: 1.5em;
-  }
-  
-  .function-card p {
-    color: #333;
-    font-size: 1.1em;
-  }
-  
-  .button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #00ac25;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #db2b39;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  table th, table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  table th {
-    background-color: #00ac25;
-    color: white;
-  }
-  
-  .logout-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #412df8; /* Red color for the button */
-    color: white;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .logout-btn:hover {
-    background-color: #838bf0; 
-  }
-  
+
+/* Admin Functions */
+.admin-functions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.function-card {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 220px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.function-card h3 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.function-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Analytics Section */
+.analytics {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.analytic-box {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.analytic-box h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.analytic-box p {
+  font-size: 1.25rem;
+  margin: 10px 0 0;
+}
+
+/* Attendance and Leave Chart */
+.attendance-chart {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.attendance-chart h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+/* Employee Profiles Table */
+.container {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-profile {
+  display: none;
+}
+
+.employee-profile h2 {
+  font-size: 1.5rem;
+}
+
+.employee-profile p {
+  margin: 5px 0;
+}
+
+.employee-profile span {
+  font-weight: bold;
+}
+
+table tr:hover .employee-profile {
+  display: block;
+}
+
+/* Status Colors */
+td:nth-child(4) {
+  text-align: center;
+}
+
+td:nth-child(4):nth-of-type(odd) {
+  background-color: #e8f8e8; /* Active employee */
+}
+
+td:nth-child(4):nth-of-type(even) {
+  background-color: #f8e8e8; /* On Leave */
+}
