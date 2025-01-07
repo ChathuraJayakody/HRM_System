@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d7ffdf;
+    padding: 2px 10px;
+}
+
+.navbar h1 {
+    color: #00ac25;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #db2b39;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+  
+  .payroll-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .payroll-header h1 {
+    color: #333;
+  }
+  
+  .payroll-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .payroll-info div {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+  
+  .payroll-info label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .payroll-info p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #d47179;
+    color: white;
+  }
+  
+  table td {
+    background-color: #f9f9f9;
+  }
+  
+  table td strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .payment-method p {
+    margin: 5px 0;
+  }
+  
+  .payment-method strong {
+    color: #333;
+  }
+  
+ 
+  
