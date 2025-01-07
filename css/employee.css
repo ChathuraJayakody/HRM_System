@@ -10,6 +10,7 @@
 
 .navbar h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 .navbar nav a {
@@ -25,15 +26,18 @@
 
 /* Container Styling */
 .container {
-    margin: 20px auto;
+    margin: 30px auto;
     width: 80%;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;          
 }
 
 .profile-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 50px;
+    padding: 50px;
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -57,6 +61,11 @@
 
 .employee-info h2 {
     margin-top: 0;
+    font-size: 2em;
+}
+
+.employee-info p {
+    font-size: 1.2em;
 }
 
 /* Button Container Styling */
@@ -64,6 +73,7 @@
     margin-top: 15px;
     display: flex;
     gap: 10px;
+
 }
 
 .info-button {
