@@ -1,0 +1,104 @@
+/* Styles for Manage Employees Page */
+body {
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7ffdf;
+  padding: 10px 20px;
+}
+
+.navbar h1 {
+  color: #00ac25;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #05ac20;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button::before {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-container,
+.remove-container {
+  margin-top: 30px;
+}
+
+.form-container h3,
+.remove-container h3 {
+  color: #00ac25;
+  text-align: center;
+}
+
+.form-container form,
+.remove-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.remove-container {
+  margin-top: 50px; /* Adjust this value for top spacing */
+}
+
+
+input[type="text"], input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+  background-color: #00ac25;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #db2b39;
+}

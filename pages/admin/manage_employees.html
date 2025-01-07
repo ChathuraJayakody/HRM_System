@@ -1,0 +1,43 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../css/manage_employees.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>Admin</h1>
+    <nav>
+      <a href="../admin.html" class="back-button">Back to Admin Panel</a>
+    </nav>
+  
+  </div>
+
+  <div class="container">
+    <h2>Manage Employees</h2>
+
+    <div class="form-container">
+      <h3>Add New Employee</h3>
+      <form>
+        <label for="name">Employee Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required><br>
+
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
+
+    <div class="remove-container">
+      <h3>Remove Employee</h3>
+      <form>
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required><br>
+        <button type="submit">Remove Employee</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

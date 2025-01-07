@@ -1,0 +1,78 @@
+/* Styles for View Attendance Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d7ffdf;
+    padding: 10px 20px;
+  }
+  
+  .navbar h1 {
+    color: #00ac25;
+  }
+  
+  .navbar nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #05ac20;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button::before {
+    font-size: 1.5em;
+    margin-right: 10px;
+  }  
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #00ac25;
+    color: white;
+  }
+  
