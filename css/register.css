@@ -31,6 +31,10 @@ body {
     margin-bottom: 20px;
   }
   
+  .input-group-number {
+    margin-bottom: 20px;
+  }
+  
   label {
     display: block;
     font-size: 1rem;
@@ -38,7 +42,7 @@ body {
     color: #555;
   }
   
-  input[type="text"], input[type="password"], select {
+  input[type="text"], input[type="password"],input[type=number], select {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
