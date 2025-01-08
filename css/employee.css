@@ -1,50 +1,63 @@
-/* Navbar Styling */
+/* employee.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
 .navbar {
+    background-color: #020202;
+    color: white;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #6b6b69;
-    color: white;
 }
 
 .navbar h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 24px;
 }
 
 .navbar nav a {
-    text-decoration: none;
     color: white;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
 .navbar nav a:hover {
-    color: #c7c7c7;
+    background-color: #000000;
 }
 
-/* Container Styling */
+/* Container */
 .container {
-    margin: 30px auto;
     width: 80%;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh;          
+    margin: 20px auto;
 }
 
+/* Profile Section */
 .profile-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    padding: 50px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .profile-image-container {
-    flex-shrink: 0;
+    flex: 1;
+    text-align: center;
 }
 
 .profile-image {
@@ -52,43 +65,71 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #004080;
+    animation: zoomIn 1s ease-in-out;
 }
 
 .employee-info {
-    flex-grow: 1;
+    flex: 2;
+    margin-left: 20px;
 }
 
 .employee-info h2 {
-    margin-top: 0;
-    font-size: 2em;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .employee-info p {
-    font-size: 1.2em;
+    font-size: 18px;
+    margin: 8px 0;
 }
 
-/* Button Container Styling */
+/* Button Container */
 .button-container {
-    margin-top: 15px;
     display: flex;
-    gap: 10px;
-
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .info-button {
-    padding: 10px 20px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: #004080;
+    background-color: #4CAF50;
     color: white;
+    padding: 15px 30px;
     text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .info-button:hover {
-    background-color: #002a50;
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
 }
