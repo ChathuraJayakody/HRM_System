@@ -49,7 +49,7 @@ CREATE TABLE Registration_table (
 Clone the project to your local machine:
 
 ```bash
-git clone https://github.com/your-username/HRM-System.git
+git clone https://github.com/ChathuraJayakody/HRM_System.git
 ```
 
 ### **2. Set Up the Database**
