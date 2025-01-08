@@ -1,7 +1,7 @@
-/* General styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,52 +10,59 @@ body {
     height: 100vh;
   }
   
-  .login-container {
+  .register-container {
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 30px;
+    padding: 25px 35px;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     box-sizing: border-box;
   }
   
   h1 {
     text-align: center;
-    font-size: 1.8rem;
-    color: #333333;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
   }
   
   .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   label {
     display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #555555;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
   }
   
   input[type="text"], input[type="password"], select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
-    border: 1px solid #cccccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
   }
   
+  input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
   button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
   }
   
   button:hover {
@@ -65,11 +72,12 @@ body {
   p {
     text-align: center;
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #555;
   }
   
   p a {
-    color: #007BFF;
+    color: #007bff;
     text-decoration: none;
   }
   
@@ -77,13 +85,35 @@ body {
     text-decoration: underline;
   }
   
-  /* Media Queries for Responsiveness */
+  /* Media Queries */
   
-  /* Small devices (tablets, 600px and below) */
+  /* Tablets (600px and below) */
   @media only screen and (max-width: 600px) {
-    .login-container {
-      padding: 15px 20px;
+    .register-container {
+      padding: 20px 25px;
       width: 90%;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    input[type="text"], input[type="password"], select {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Mobile Phones (400px and below) */
+  @media only screen and (max-width: 400px) {
+    .register-container {
+      padding: 15px 20px;
+      width: 95%;
     }
   
     h1 {
@@ -95,43 +125,13 @@ body {
       padding: 8px;
     }
   
-    label {
-      font-size: 0.8rem;
-    }
-  
     input[type="text"], input[type="password"], select {
       padding: 8px;
       font-size: 0.9rem;
     }
-  }
-  
-  /* Extra small devices (mobile phones, 400px and below) */
-  @media only screen and (max-width: 400px) {
-    .login-container {
-      padding: 10px 15px;
-      width: 95%;
-    }
-  
-    h1 {
-      font-size: 1.2rem;
-    }
-  
-    button {
-      font-size: 0.8rem;
-      padding: 6px;
-    }
-  
-    label {
-      font-size: 0.7rem;
-    }
-  
-    input[type="text"], input[type="password"], select {
-      padding: 6px;
-      font-size: 0.8rem;
-    }
   
     p {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   }
   

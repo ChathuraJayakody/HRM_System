@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/login.css">
-  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="css/register.css">
+  <title>Register</title>
 </head>
 <body>
-  <div class="login-container">
-    <h1>Login</h1>
-    <form action="login.php" method="POST">
+  <div class="register-container">
+    <h1>Register</h1>
+    <form action="register.php" method="POST">
       <div class="input-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
@@ -17,15 +17,15 @@
         <input type="password" id="password" name="password" required>
       </div>
       <div class="role-options">
+        <label for="role">Register as</label>
         <select id="role" name="role" required>
           <option value="Admin">Admin</option>
           <option value="Manager">Manager</option>
           <option value="Employee">Employee</option>
         </select>
       </div>
-      <button type="submit" class="login-button">Login</button>
+      <button type="submit" class="register-button">Register</button>
     </form>
-    <p>Don't have an account? <a href="register.html">Register here</a></p>
   </div>
 </body>
 </html>
