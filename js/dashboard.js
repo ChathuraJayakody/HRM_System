@@ -5,7 +5,7 @@ canvasLeft.height = 150;
 
 let x = 50, y = 50, dx = 2, dy = 2, radius = 20;
 
-function animateLeft() {
+function animateLeft() { 
   ctxLeft.clearRect(0, 0, canvasLeft.width, canvasLeft.height);
   ctxLeft.beginPath();
   ctxLeft.arc(x, y, radius, 0, Math.PI * 2);

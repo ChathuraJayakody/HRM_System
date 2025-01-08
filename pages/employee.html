@@ -1,15 +1,22 @@
-<html>
+<!-- employee_profile.html -->
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Profile</title>
     <link rel="stylesheet" href="../css/employee.css">
+    <script src="../js/employee.js" defer></script>
 </head>
 <body>
+    <!-- Navbar Section -->
     <div class="navbar">
         <h1>Employee Profile</h1>
         <nav>
-            <a href="../index.html">Logout</a>
+            <a href="../index.html" id="logout-btn">Logout</a>
         </nav>
     </div>
+
+    <!-- Profile Section -->
     <div class="container">
         <div class="profile-container">
             <div class="profile-image-container">
@@ -26,11 +33,17 @@
             </div>
         </div>
 
-        <!-- New Div for Additional Information Buttons -->
+        <!-- Additional Information Links -->
         <div class="button-container">
             <a href="employee/attendance.html" class="info-button">View Attendance</a>
             <a href="employee/payroll_information.html" class="info-button">View Payroll Information</a>
         </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Company Name. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
