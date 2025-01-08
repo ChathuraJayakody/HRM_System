@@ -1,137 +1,211 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Role Selection */
+.role-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.role-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.role-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Forms */
+.login-form {
+  display: none;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+input[type="text"], input[type="password"], select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+p a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Role-Specific Backgrounds and Animations */
+#role-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Admin Animation */
+.admin-animation {
+  animation: adminAnimation 2s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes adminAnimation {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Manager Animation */
+.manager-animation {
+  animation: managerAnimation 2s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes managerAnimation {
+  0% { transform: rotate(0deg); opacity: 0.8; }
+  50% { transform: rotate(10deg); opacity: 1; }
+  100% { transform: rotate(0deg); opacity: 0.8; }
+}
+
+/* Employee Animation */
+.employee-animation {
+  animation: employeeAnimation 2s infinite;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes employeeAnimation {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
   .login-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 30px;
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
+    padding: 15px 20px;
+    width: 90%;
   }
-  
+
   h1 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #333333;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
   }
-  
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    color: #555555;
-  }
-  
-  input[type="text"], input[type="password"], select {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
+
   button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    width: 100%;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 8px;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+
+  label {
+    font-size: 0.8rem;
   }
-  
-  p {
-    text-align: center;
-    margin-top: 20px;
+
+  input[type="text"], input[type="password"], select {
+    padding: 8px;
     font-size: 0.9rem;
   }
-  
-  p a {
-    color: #007BFF;
-    text-decoration: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .login-container {
+    padding: 10px 15px;
+    width: 95%;
   }
-  
-  p a:hover {
-    text-decoration: underline;
+
+  h1 {
+    font-size: 1.2rem;
   }
-  
-  /* Media Queries for Responsiveness */
-  
-  /* Small devices (tablets, 600px and below) */
-  @media only screen and (max-width: 600px) {
-    .login-container {
-      padding: 15px 20px;
-      width: 90%;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    button {
-      font-size: 0.9rem;
-      padding: 8px;
-    }
-  
-    label {
-      font-size: 0.8rem;
-    }
-  
-    input[type="text"], input[type="password"], select {
-      padding: 8px;
-      font-size: 0.9rem;
-    }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px;
   }
-  
-  /* Extra small devices (mobile phones, 400px and below) */
-  @media only screen and (max-width: 400px) {
-    .login-container {
-      padding: 10px 15px;
-      width: 95%;
-    }
-  
-    h1 {
-      font-size: 1.2rem;
-    }
-  
-    button {
-      font-size: 0.8rem;
-      padding: 6px;
-    }
-  
-    label {
-      font-size: 0.7rem;
-    }
-  
-    input[type="text"], input[type="password"], select {
-      padding: 6px;
-      font-size: 0.8rem;
-    }
-  
-    p {
-      font-size: 0.8rem;
-    }
+
+  label {
+    font-size: 0.7rem;
   }
-  
+
+  input[type="text"], input[type="password"], select {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
