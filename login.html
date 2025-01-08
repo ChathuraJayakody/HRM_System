@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <title>Login</title>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    
+
+    <div class="role-selection">
+      <button class="role-btn" onclick="selectRole('admin')">Admin</button>
+      <button class="role-btn" onclick="selectRole('manager')">Manager</button>
+      <button class="role-btn" onclick="selectRole('employee')">Employee</button>
+    </div>
+
+ 
+    <div id="admin-manager-form" class="login-form" style="display: none;">
+      <form action="login.php" method="POST">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+    </div>
+
+
+    <div id="employee-form" class="login-form" style="display: none;">
+      <form action="employee_login.php" method="POST">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group">
+          <label for="role">Role</label>
+          <input type="text" id="role" name="role" value="Employee" readonly>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+      <p>New Employee? <a href="employee_register.html">Register here</a></p>
+    </div>
+    
+    <div id="role-animation" class="role-animation"></div>
+  </div>
+
+  <script>
+    function selectRole(role) {
+      // Hide all forms initially
+      document.getElementById("admin-manager-form").style.display = "none";
+      document.getElementById("employee-form").style.display = "none";
+      document.getElementById("role-animation").classList.remove("active");
+    
+      // Show the relevant form based on role
+      if (role === "admin" || role === "manager") {
+        document.getElementById("admin-manager-form").style.display = "block";
+        document.querySelector('#employee-form p').style.display = 'none';
+      } else if (role === "employee") {
+        document.getElementById("employee-form").style.display = "block";
+        document.querySelector('#employee-form p').style.display = 'block';
+      }
+    
+      // Activate the spotlight and animation
+      const roleAnimationDiv = document.getElementById("role-animation");
+      roleAnimationDiv.classList.add("active");
+    
+      // Change background and animation based on selected role
+      roleAnimationDiv.style.transition = "background 0.5s ease-in-out"; // Smooth transition
+      if (role === "admin") {
+        roleAnimationDiv.style.backgroundImage = "url('admin-bg.jpg')";
+        roleAnimationDiv.className = "admin-animation";
+        document.body.style.backgroundColor = "#f0f0f0"; // Light color for Admin
+      } else if (role === "manager") {
+        roleAnimationDiv.style.backgroundImage = "url('manager-bg.jpg')";
+        roleAnimationDiv.className = "manager-animation";
+        document.body.style.backgroundColor = "#e0e0e0"; // Slightly darker for Manager
+      } else if (role === "employee") {
+        roleAnimationDiv.style.backgroundImage = "url('employee-bg.jpg')";
+        roleAnimationDiv.className = "employee-animation";
+        document.body.style.backgroundColor = "#d0d0d0"; // Darker color for Employee
+      }
+    
+      // Add fade-in animation to form
+      setTimeout(function() {
+        document.getElementById(role + "-form").classList.add("active");
+      }, 200);
+    }
+    
+  </script>
+</body>
+</html>
