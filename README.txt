@@ -18,7 +18,7 @@ This is a Human Resource Management (HRM) System designed for handling employee 
 
 ## Database Details
 
-The project uses a MySQL database named `mobile-computing-assignment` to store user data.
+The project uses a MySQL database named `hrm_system` to store user data.
 
 ### **Database Schema**
 
