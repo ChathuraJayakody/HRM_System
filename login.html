@@ -5,98 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/login.css">
   <title>Login</title>
+  <script>
+    // Function to handle role selection
+    function selectRole(role) {
+      // Hide all forms initially
+      document.getElementById("admin-form").style.display = "none";
+      document.getElementById("manager-form").style.display = "none";
+      document.getElementById("employee-form").style.display = "none";
+
+      // Show the relevant form based on role
+      if (role === "admin") {
+        document.getElementById("admin-form").style.display = "block";
+      } else if (role === "manager") {
+        document.getElementById("manager-form").style.display = "block";
+      } else if (role === "employee") {
+        document.getElementById("employee-form").style.display = "block";
+      }
+    }
+
+    // Function to redirect to a page
+    function redirectToPage(event, role) {
+      event.preventDefault(); // Prevent form submission
+
+      if (role === "admin") {
+        window.location.href = "pages/admin.html";
+      } else if (role === "manager") {
+        window.location.href = "pages/manager.html";
+      } else if (role === "employee") {
+        window.location.href = "pages/employee.html";
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="login-container">
     <h1>Login</h1>
-    
 
+    <!-- Role Selection Buttons -->
     <div class="role-selection">
       <button class="role-btn" onclick="selectRole('admin')">Admin</button>
       <button class="role-btn" onclick="selectRole('manager')">Manager</button>
       <button class="role-btn" onclick="selectRole('employee')">Employee</button>
     </div>
 
- 
-    <div id="admin-manager-form" class="login-form" style="display: none;">
-      <form action="login.php" method="POST">
+    <!-- Admin Form -->
+    <div id="admin-form" class="login-form" style="display: none;">
+      <form id="adminLoginForm" onsubmit="redirectToPage(event, 'admin')">
         <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
+          <label for="admin-username">Admin Username</label>
+          <input type="text" id="admin-username" name="admin-username">
         </div>
         <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
+          <label for="admin-password">Admin Password</label>
+          <input type="password" id="admin-password" name="admin-password">
         </div>
-        <button type="submit" class="login-button">Login</button>
+        <button type="submit" class="login-button">Login as Admin</button>
       </form>
     </div>
 
-
-    <div id="employee-form" class="login-form" style="display: none;">
-      <form action="employee_login.php" method="POST">
+    <!-- Manager Form -->
+    <div id="manager-form" class="login-form" style="display: none;">
+      <form id="managerLoginForm" onsubmit="redirectToPage(event, 'manager')">
         <div class="input-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" name="username" required>
+          <label for="manager-username">Manager Username</label>
+          <input type="text" id="manager-username" name="manager-username">
         </div>
         <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
+          <label for="manager-password">Manager Password</label>
+          <input type="password" id="manager-password" name="manager-password">
+        </div>
+        <button type="submit" class="login-button">Login as Manager</button>
+      </form>
+    </div>
+
+    <!-- Employee Form -->
+    <div id="employee-form" class="login-form" style="display: none;">
+      <form id="employeeLoginForm" onsubmit="redirectToPage(event, 'employee')">
+        <div class="input-group">
+          <label for="employee-username">Employee Username</label>
+          <input type="text" id="employee-username" name="employee-username">
+        </div>
+        <div class="input-group">
+          <label for="employee-password">Employee Password</label>
+          <input type="password" id="employee-password" name="employee-password">
         </div>
         <div class="input-group">
           <label for="role">Role</label>
           <input type="text" id="role" name="role" value="Employee" readonly>
         </div>
-       <a href="./pages/employee.html"> <button type="submit" class="login-button" >Login</button></a> 
+        <button type="submit" class="login-button">Login as Employee</button>
       </form>
       <p>New Employee? <a href="register.html">Register here</a></p>
     </div>
-    
-    <div id="role-animation" class="role-animation"></div>
   </div>
-
-  <script>
-    function selectRole(role) {
-      // Hide all forms initially
-      document.getElementById("admin-manager-form").style.display = "none";
-      document.getElementById("employee-form").style.display = "none";
-      document.getElementById("role-animation").classList.remove("active");
-    
-      // Show the relevant form based on role
-      if (role === "admin" || role === "manager") {
-        document.getElementById("admin-manager-form").style.display = "block";
-        document.querySelector('#employee-form p').style.display = 'none';
-      } else if (role === "employee") {
-        document.getElementById("employee-form").style.display = "block";
-        document.querySelector('#employee-form p').style.display = 'block';
-      }
-    
-      // Activate the spotlight and animation
-      const roleAnimationDiv = document.getElementById("role-animation");
-      roleAnimationDiv.classList.add("active");
-    
-      // Change background and animation based on selected role
-      roleAnimationDiv.style.transition = "background 0.5s ease-in-out"; // Smooth transition
-      if (role === "admin") {
-        roleAnimationDiv.style.backgroundImage = "url('admin-bg.jpg')";
-        roleAnimationDiv.className = "admin-animation";
-        document.body.style.backgroundColor = "#f0f0f0"; // Light color for Admin
-      } else if (role === "manager") {
-        roleAnimationDiv.style.backgroundImage = "url('manager-bg.jpg')";
-        roleAnimationDiv.className = "manager-animation";
-        document.body.style.backgroundColor = "#e0e0e0"; // Slightly darker for Manager
-      } else if (role === "employee") {
-        roleAnimationDiv.style.backgroundImage = "url('employee-bg.jpg')";
-        roleAnimationDiv.className = "employee-animation";
-        document.body.style.backgroundColor = "#d0d0d0"; // Darker color for Employee
-      }
-    
-      // Add fade-in animation to form
-      setTimeout(function() {
-        document.getElementById(role + "-form").classList.add("active");
-      }, 200);
-    }
-    
-  </script>
 </body>
 </html>

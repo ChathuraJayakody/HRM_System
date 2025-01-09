@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar h1 {
@@ -39,14 +40,15 @@ body {
 
 /* Container */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
 }
 
 /* Profile Section */
 .profile-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     background-color: white;
     padding: 20px;
@@ -58,11 +60,12 @@ body {
 .profile-image-container {
     flex: 1;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     animation: zoomIn 1s ease-in-out;
@@ -71,32 +74,35 @@ body {
 .employee-info {
     flex: 2;
     margin-left: 20px;
+    text-align: center;
 }
 
 .employee-info h2 {
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
 .employee-info p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 8px 0;
 }
 
 /* Button Container */
 .button-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .info-button {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
+    margin: 5px;
     transition: background-color 0.3s;
 }
 
@@ -131,5 +137,51 @@ footer {
     }
     to {
         transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar nav a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .employee-info {
+        margin: 0;
+        text-align: center;
+    }
+
+    .employee-info h2 {
+        font-size: 20px;
+    }
+
+    .employee-info p {
+        font-size: 14px;
+    }
+
+    .info-button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 }

@@ -6,22 +6,24 @@ body {
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #4b484a;
   color: white;
 }
 
 .navbar h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .navbar nav a {
   text-decoration: none;
   color: white;
-  font-size: 1.1em;
+  font-size: 1em;
+  margin-left: 10px;
   transition: color 0.3s ease;
 }
 
@@ -32,34 +34,37 @@ body {
 /* Admin Functions */
 .admin-functions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 40px;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  margin-top: 20px;
+  
 }
 
 .function-card {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   text-align: center;
-  width: 220px;
-  margin: 10px;
+  width: 90%;
+  max-width: 220px;
+  margin: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
 .function-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin: 10px 0;
 }
 
 .function-card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .button {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 10px;
   background-color: #4CAF50;
   color: white;
   border-radius: 5px;
@@ -73,52 +78,57 @@ body {
 /* Analytics Section */
 .analytics {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
 }
 
 .analytic-box {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
-  width: 200px;
+  width: 90%;
+  max-width: 200px;
+  margin: 10px 10px;
 }
 
 .analytic-box h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .analytic-box p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: 10px 0 0;
 }
 
 /* Attendance and Leave Chart */
 .attendance-chart {
-  margin: 40px 0;
+  margin: 20px 0;
   text-align: center;
+  padding: 0 15px;
 }
 
 .attendance-chart h3 {
-  font-size: 1.75rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 /* Employee Profiles Table */
 .container {
-  padding: 20px;
+  padding: 10px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 table th, table td {
-  padding: 12px;
+  padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
@@ -128,7 +138,7 @@ table th, table td {
 }
 
 .employee-profile h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .employee-profile p {
@@ -154,4 +164,36 @@ td:nth-child(4):nth-of-type(odd) {
 
 td:nth-child(4):nth-of-type(even) {
   background-color: #f8e8e8; /* On Leave */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+   display: flex;
+  }
+
+  .navbar h1 {
+    font-size: 1.8em;
+  }
+
+  .navbar nav a {
+    font-size: 0.9em;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .admin-functions {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+ 
+
+  .analytics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table th, table td {
+    font-size: 0.8rem;
+  }
 }
