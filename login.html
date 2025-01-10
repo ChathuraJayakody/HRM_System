@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/login.css">
   <title>Login</title>
   <script>
-    // Function to handle role selection
     function selectRole(role) {
-      // Hide all forms initially
       document.getElementById("admin-form").style.display = "none";
       document.getElementById("manager-form").style.display = "none";
       document.getElementById("employee-form").style.display = "none";
 
-      // Show the relevant form based on role
       if (role === "admin") {
         document.getElementById("admin-form").style.display = "block";
       } else if (role === "manager") {
@@ -23,9 +18,8 @@
       }
     }
 
-    // Function to redirect to a page
     function redirectToPage(event, role) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault();
 
       if (role === "admin") {
         window.location.href = "pages/admin.html";
@@ -41,14 +35,12 @@
   <div class="login-container">
     <h1>Login</h1>
 
-    <!-- Role Selection Buttons -->
     <div class="role-selection">
       <button class="role-btn" onclick="selectRole('admin')">Admin</button>
       <button class="role-btn" onclick="selectRole('manager')">Manager</button>
       <button class="role-btn" onclick="selectRole('employee')">Employee</button>
     </div>
 
-    <!-- Admin Form -->
     <div id="admin-form" class="login-form" style="display: none;">
       <form id="adminLoginForm" onsubmit="redirectToPage(event, 'admin')">
         <div class="input-group">
@@ -63,7 +55,6 @@
       </form>
     </div>
 
-    <!-- Manager Form -->
     <div id="manager-form" class="login-form" style="display: none;">
       <form id="managerLoginForm" onsubmit="redirectToPage(event, 'manager')">
         <div class="input-group">
@@ -78,7 +69,6 @@
       </form>
     </div>
 
-    <!-- Employee Form -->
     <div id="employee-form" class="login-form" style="display: none;">
       <form id="employeeLoginForm" onsubmit="redirectToPage(event, 'employee')">
         <div class="input-group">

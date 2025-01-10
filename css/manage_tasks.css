@@ -1,6 +1,4 @@
-/* General Styles */
 body {
-
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
@@ -27,11 +25,10 @@ body {
 .navbar nav a {
     text-decoration: none;
     color: rgb(218, 221, 221);
-    font-weight: bold;
+   
 }
-  
 
-/* Container Styles */
+
 .container {
     padding: 20px;
 }
@@ -76,4 +73,108 @@ form button {
 
 form button:hover {
     background-color: #45a049;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navbar nav a {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    form {
+        max-width: 450px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form select, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 28px;
+    }
+
+    .navbar nav {
+        display: flex;
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    form label {
+        font-size: 14px;
+    }
+
+    form select, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form label {
+        font-size: 12px;
+    }
+
+    form select, form textarea {
+        font-size: 12px;
+    }
+
+    form button {
+        padding: 6px 12px;
+    }
 }

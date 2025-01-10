@@ -1,10 +1,10 @@
 <html>
 <head>
     <title>Employee Profiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/admin.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Animation for table row hover */
         table tbody tr {
             transition: background-color 0.3s ease;
         }
@@ -13,12 +13,10 @@
             background-color: rgba(0, 0, 0, 0.1);
         }
 
-        /* Smooth animation for the chart */
         .attendance-chart {
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* Simple fade-in animation */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -28,7 +26,6 @@
             }
         }
 
-        /* Responsive layout */
         @media (max-width: 768px) {
             .admin-functions {
                 display: block;
@@ -55,11 +52,13 @@
   <div class="navbar">
     <h1>Admin</h1>
     <nav>
+        <a href="admin/manage_employees.html">Manage Employees</a>
+        <a href="admin/view_attendance.html">View Attendance</a>
+        <a href="admin/view_payroll.html">View Payroll</a>
         <a href="../login.html">Logout</a>
     </nav>
   </div>
 
-  <!-- Admin Functions Section -->
   <div class="admin-functions">
     <div class="function-card">
         <h3>Manage Employees</h3>
@@ -83,7 +82,6 @@
     </div>
   </div>
 
-  <!-- Analytics Section -->
   <div class="analytics">
     <div class="analytic-box">
         <h3>Total Employees</h3>
@@ -103,35 +101,15 @@
     </div>
   </div>
 
-  <!-- Attendance and Leave Chart -->
   <div class="attendance-chart">
     <h3>Employee Attendance and Leave</h3>
     <canvas id="attendanceChart" width="400" height="200"></canvas>
   </div>
 
-  <!-- Employee Profiles Table -->
-  <div class="container">
-    <table>
-      <thead>
-          <tr>
-              <th>Name</th>
-              <th>Department</th>
-              <th>Phone</th>
-              <th>Status</th>
-              <th>Details</th>
-          </tr>
-      </thead>
-      <tbody>
-          <!-- Employee rows go here, same as before -->
-      </tbody>
-    </table>
-  </div>
 
   <script>
-      // Update Total Employees dynamically
       document.getElementById("totalEmployees").innerText = 15;
 
-      // Attendance and Leave Chart with Animation
       var ctx = document.getElementById('attendanceChart').getContext('2d');
       var attendanceChart = new Chart(ctx, {
           type: 'bar',
@@ -142,13 +120,13 @@
               ],
               datasets: [{
                   label: 'Attendance',
-                  data: [80, 90, 85, 95, 90, 75, 80, 88, 70, 85], // Example attendance percentages
+                  data: [80, 90, 85, 95, 90, 75, 80, 88, 70, 85],
                   backgroundColor: 'rgba(54, 162, 235, 0.2)',
                   borderColor: 'rgba(54, 162, 235, 1)',
                   borderWidth: 1
               }, {
                   label: 'Leave Taken',
-                  data: [5, 2, 3, 1, 0, 6, 3, 4, 2, 3], // Example leave days taken
+                  data: [5, 2, 3, 1, 0, 6, 3, 4, 2, 3],
                   backgroundColor: 'rgba(255, 99, 132, 0.2)',
                   borderColor: 'rgba(255, 99, 132, 1)',
                   borderWidth: 1
@@ -156,7 +134,7 @@
           },
           options: {
               animation: {
-                  duration: 1500, // Smooth animation duration for chart rendering
+                  duration: 1500,
               },
               scales: {
                   y: {

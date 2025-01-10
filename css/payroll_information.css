@@ -1,107 +1,157 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-  }
-  
-  .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3c443e;
-    padding: 2px 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3c443e;
+  padding: 2px 10px;
 }
 
 .navbar h1 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .navbar nav {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar nav a {
-    text-decoration: none;
-    color: #c7c7c7;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #c7c7c7;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
-  
-  .payroll-header {
-    text-align: center;
-    margin-bottom: 20px;
+.payroll-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.payroll-header h1 {
+  color: #333;
+}
+
+.payroll-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.payroll-info div {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+.payroll-info label {
+  font-weight: bold;
+  color: #555;
+}
+
+.payroll-info p {
+  margin: 5px 0;
+  color: #777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #d47179;
+  color: white;
+}
+
+table td {
+  background-color: #f9f9f9;
+}
+
+table td strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.payment-method p {
+  margin: 5px 0;
+}
+
+.payment-method strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
-  .payroll-header h1 {
-    color: #333;
+
+  .container {
+      width: 90%;
+      padding: 15px;
   }
-  
-  .payroll-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+
   .payroll-info div {
-    width: 48%;
-    margin-bottom: 15px;
+      width: 100%;
   }
-  
-  .payroll-info label {
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .payroll-info p {
-    margin: 5px 0;
-    color: #777;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+
   table th, table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
+      padding: 8px;
   }
-  
-  table th {
-    background-color: #d47179;
-    color: white;
+
+  .navbar nav {
+      flex-direction: column;
+      gap: 15px;
   }
-  
-  table td {
-    background-color: #f9f9f9;
+
+  .navbar nav a {
+      font-size: 1em;
   }
-  
-  table td strong {
-    font-weight: bold;
-    color: #333;
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+      font-size: 1.5em;
   }
-  
-  .payment-method p {
-    margin: 5px 0;
+
+  .container {
+      padding: 10px;
   }
-  
-  .payment-method strong {
-    color: #333;
+
+  .payroll-header h1 {
+      font-size: 1.8em;
   }
-  
- 
-  
+
+  .payroll-info div {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  table th, table td {
+      padding: 6px;
+      font-size: 0.9em;
+  }
+}

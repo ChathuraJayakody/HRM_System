@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,9 +9,9 @@ body {
   background: linear-gradient(135deg, #0e1c2a, #181c1f, #500a28, #070321, #070e07);
   background-size: 300% 300%;
   animation: auroraBackground 10s ease infinite;
-  color: white; /* Text color */
+  color: white;
   position: relative;
-  overflow: hidden; /* Ensure the background grid doesn't overflow */
+  overflow: hidden;
 }
 
 @keyframes auroraBackground {
@@ -27,7 +26,6 @@ body {
   }
 }
 
-/* Grid and Dot Background */
 body::before {
   content: "";
   position: absolute;
@@ -36,10 +34,10 @@ body::before {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px; /* Adjust grid density */
+  background-size: 20px 20px;
   z-index: 1;
-  opacity: 0.3; /* Subtle effect */
-  pointer-events: none; /* Prevent interference with other elements */
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 body::after {
@@ -64,11 +62,10 @@ body::after {
       transparent 20px
     );
   z-index: 1;
-  opacity: 0.2; /* Subtle effect */
+  opacity: 0.2;
   pointer-events: none;
 }
 
-/* Dashboard Container */
 .dashboard-container {
   display: flex;
   width: 90%;
@@ -80,15 +77,14 @@ body::after {
   overflow: hidden;
   transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
   transition: transform 0.5s ease;
-  position: relative; /* For layering */
-  z-index: 2; /* Ensure it appears above the grid */
+  position: relative;
+  z-index: 2;
 }
 
 .dashboard-container:hover {
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
 
-/* Left Section */
 .left-section {
   flex: 1;
   background: linear-gradient(135deg, #020305, #5687bb);
@@ -123,7 +119,6 @@ body::after {
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
 }
 
-/* Right Section */
 .right-section {
   flex: 1;
   display: flex;
@@ -167,34 +162,32 @@ body::after {
   margin-top: 20px;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .dashboard-container {
     flex-direction: column;
   }
   .left-section, .right-section {
     width: 100%;
-    border-radius: 0; /* Remove border-radius for small screens */
+    border-radius: 0;
   }
 }
 
 .image-container {
-  margin-top: 20px; /* Adds space between buttons and image */
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image-container img {
-  width: 150px; /* Adjust the size of the image */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-container img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
