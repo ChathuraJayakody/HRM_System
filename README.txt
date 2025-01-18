@@ -67,5 +67,3 @@ Open `index.html` in your browser to access the login page.
 - Implement features for managing employee tasks and reports in the Admin and Manager panels.
 - Add more user fields such as employee roles, departments, and more.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
